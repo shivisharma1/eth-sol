@@ -1,0 +1,275 @@
+div {
+    
+    display: flex;
+    justify-content: center;
+    }
+
+
+
+body{
+    background-image: url("images/papers.co-sn14-peach-pink-blur-gradation-29-wallpaper.jpg");
+    position: relative;
+    background-size: cover;
+ 
+}
+
+.label {
+  color: black;
+  padding: 8px;
+  margin-left: 6cm;
+}
+
+.textbox{
+  color: black;
+  margin-left: 1cm;
+  width: 25pc;
+  padding: 5px 0px;
+  box-sizing: border-box;
+  border: 2px solid orangered;
+  border-radius: 2px;
+}
+
+.warning {background-color: rgb(250, 159, 126);} /* Orange */
+
+.typewriter h5 {
+   
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .20em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 50 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    animation: 
+      typing 3.8s steps(40, end),
+      blink-caret .75s step-end infinite;
+
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 18% }
+    
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    23% { border-color: orange; }
+  }
+
+
+
+/* CSS */
+.button-62 {
+  background: linear-gradient(to bottom right, #FFA500, #FF6347);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-left: 6cm;
+ 
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(190, 155, 162, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:disabled,
+button-62[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: lightpink;
+  color-adjust: grey;
+}
+
+/* for transact button  */
+
+.button-63 {
+  background: linear-gradient(to bottom right, #FFA500, #FF6347);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-left: 1cm;
+ 
+}
+
+.button-63:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-63:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(190, 155, 162, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-63:disabled,
+button-63[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: lightpink;
+  color-adjust: grey;
+}
+
+
+/* for clear button */
+.button-64 {
+  background: linear-gradient(to bottom right, #FFA500, #FF6347);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-left: 1cm;
+ 
+}
+
+.button-64:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-64:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(190, 155, 162, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-64:disabled,
+button-64[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: lightpink;
+  color-adjust: grey;
+}
+
+/* for copy button */
+.button-65 {
+  background: linear-gradient(to bottom right, #FFA500, #FF6347);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-left: 1cm;
+ 
+}
+
+.button-65:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-65:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(190, 155, 162, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-65:disabled,
+button-65[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: lightpink;
+  color-adjust: grey;
+}
+
+
+
+  img{
+    width:300px;
+    float: right;
+    margin-right: 50px;
+  }
+
+  .drpdwnbtn{
+    margin-top: -30px;
+    margin-left: -8.5cm;
+  }
+
+  .no-drop {cursor: no-drop;}
+
+  .navbar {
+    width: auto;
+    background-color: lightgray;
+    overflow:visible;
+    display:inline-block;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: orange;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+

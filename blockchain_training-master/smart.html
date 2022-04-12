@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Triggering Smart Contract</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.2-rc.0/web3.min.js" integrity="sha512-REWiGZVmhU2S5eIov/DuNrsq4djWnPaAHSvXrbLLLaI0r/gW+wh1utIzxt0iB4IQLgXhNDj5mR0YMBjrkKhVMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    
+    <script src='node_modules/web3/dist/web3.min.js'></script>
+</head>
+
+
+<body>
+
+    Triggering Smart Contract <br>
+    <br >
+    <button onclick="printCoolNumber();">Print Cool Number</button>
+    <button onclick="changeCoolNumber();">Change Cool Number</button>  
+    
+    <br /><br />
+    Status: <span id="status">Loading...</span>
+   
+    <script type="text/javascript">
+        
+        async function loadWeb3() {
+    if (window.ethereum) {      //provider injected by the MetaMask extension. So far, the code has access to interact with the blockchain
+        window.web3 = new Web3(window.ethereum);
+        window.ethereum.enable();
+    }
+
+}   //app can talk with the Smart Contract from below onwards
+
+async function loadContract() { 
+    return await new window.web3.eth.Contract([
+	{                                           // inserting ABI (Application Binary Interface) => It is very similar to API 
+                                                //Something truly important to remember here is that any change in the blockchain data needs to be represented by a transaction.
+		"inputs": [                             // ABI, contractAddress
+			{
+				"internalType": "uint256",
+				"name": "_coolNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "setCoolNumber",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "coolNumber",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+], '0x2E63c0A1Dba81EabA393533fa594885cEe5981A3');
+}
+
+async function printCoolNumber() {
+    updateStatus('fetching Cool Number...');
+    const coolNumber = await window.contract.methods.coolNumber().call(); //We use the contract instance from the previous section, we get the methods and call a function with the variable name and finally, we use call to start the remote request.
+    updateStatus(`coolNumber: ${coolNumber}`);      //get the value of the public variable coolNumber.
+}
+
+async function getCurrentAccount() {
+    const accounts = await window.web3.eth.getAccounts();
+    return accounts[0];
+}
+
+async function changeCoolNumber() {
+    const value = Math.floor(Math.random() * 100);
+    updateStatus(`Updating coolNumber with ${value}`);
+    const account = await getCurrentAccount();
+    const coolNumber = await window.contract.methods.setCoolNumber(value).send({ from: account }); //Instead of using call we are using the send method, cuz changing values need to be in form of a transaction, which needs a 'to' and 'from'
+    updateStatus('Updated.');
+}
+
+async function load() {
+    await loadWeb3();
+    window.contract = await loadContract();
+    updateStatus('Ready!');
+}
+
+function updateStatus(status) {
+    const statusEl =  document.getElementById('status');
+    statusEl.innerHTML = status;
+    console.log(status);
+}
+
+load();
+
+    </script>
+</body>
+
+</html>
